@@ -45,3 +45,12 @@ func calculate_modulo(num1: felt, num2: felt) -> (modulo: felt) {
     assert num2 != 0, "Modulo by zero";
     return (modulo = num1 % num2);
 }
+
+func calculate_power(base: felt, exponent: felt) -> (power: felt) {
+    let power = 1;
+    for i in range(exponent) {
+        power = power * base;
+    }
+    return (power);
+}
+
