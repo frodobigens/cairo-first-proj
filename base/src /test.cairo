@@ -35,8 +35,14 @@ func subtract_numbers(num_a: felt, num_b: felt) -> (result: felt) {
 }
 
 func divide_numbers(num_a: felt, num_b: felt) -> (result: felt) {
-    assert num_b != 0, "Division by zero";
-    return (result=num_a / num_b);
+    alloc_locals;
+    if (num_b == 0) {
+        local result = -1; // Indicate error
+    } else {
+        local result = num_a / num_b;
+    }
+    return (result);
 }
+
 
 
