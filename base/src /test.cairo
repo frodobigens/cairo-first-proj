@@ -28,3 +28,8 @@ func main{output_ptr: felt*}() {
 func multiply_numbers(num_a: felt, num_b: felt) -> (result: felt) {
     return (result=num_a * num_b);
 }
+
+func subtract_numbers(num_a: felt, num_b: felt) -> (result: felt) {
+    return (result=num_a - num_b);
+}
+
