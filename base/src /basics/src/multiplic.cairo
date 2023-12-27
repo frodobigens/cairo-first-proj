@@ -18,6 +18,11 @@ func main{output_ptr: felt*}() {
     serialize_word(result);
     return ();
 }
+
 func calculate_sum(num1: felt, num2: felt) -> (sum: felt) {
     return (sum = num1 + num2);
+}
+
+func calculate_difference(num1: felt, num2: felt) -> (difference: felt) {
+    return (difference = num1 - num2);
 }
