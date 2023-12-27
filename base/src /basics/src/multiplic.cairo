@@ -1,5 +1,9 @@
 %builtins output
 
+let TEST_NUM1 = 6;
+let TEST_NUM2 = 3;
+
+
 from starkware.cairo.common.serialize import serialize_word
 
 // Function to calculate the product of two numbers.
