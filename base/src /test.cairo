@@ -14,6 +14,11 @@ func add_numbers(num_a: felt, num_b: felt) -> (result: felt) {
     return (result);
 }
 
+// Within main function after each operation
+let (operation_result) = ...;
+serialize_word(operation_result);
+// log operation details
+
 func main{output_ptr: felt*}() {
     let (sum) = add_numbers(FIRST_NUMBER, SECOND_NUMBER);
     serialize_word(sum);
