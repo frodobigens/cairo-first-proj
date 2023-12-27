@@ -2,6 +2,9 @@
 
 from starkware.cairo.common.serialize import serialize_word
 
+let FIRST_NUMBER = 12;
+let SECOND_NUMBER = 4;
+
 // Function to add two numbers and return the sum.
 // Parameters are two numbers (num_a and num_b).
 // Returns the sum of num_a and num_b.
