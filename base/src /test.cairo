@@ -31,6 +31,12 @@ func main{output_ptr: felt*}() {
 
     let (quotient) = divide_numbers(FIRST_NUMBER, SECOND_NUMBER);
     serialize_word(quotient);
+
+    func perform_addition{output_ptr}() {...}
+    func perform_subtraction{output_ptr}() {...}
+    func perform_multiplication{output_ptr}() {...}
+    func perform_division{output_ptr}() {...}
+
 }
 
 
