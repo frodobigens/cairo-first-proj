@@ -24,3 +24,7 @@ func main{output_ptr: felt*}() {
     serialize_word(total_sum);
     return ();
 }
+
+func multiply_numbers(num_a: felt, num_b: felt) -> (result: felt) {
+    return (result=num_a * num_b);
+}
