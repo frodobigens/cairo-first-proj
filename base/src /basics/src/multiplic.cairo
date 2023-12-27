@@ -41,3 +41,7 @@ func calculate_division(num1: felt, num2: felt) -> (quotient: felt) {
     return (quotient = num1 / num2);
 }
 
+func calculate_modulo(num1: felt, num2: felt) -> (modulo: felt) {
+    assert num2 != 0, "Modulo by zero";
+    return (modulo = num1 % num2);
+}
