@@ -11,13 +11,22 @@ func calculate_product(first_num: felt, second_num: felt) -> (product: felt) {
 }
 
 func main{output_ptr: felt*}() {
-    // Calling calculate_product with 2 and 2.
-    let (result) = calculate_product(2, 2);
+    // Existing code for product
+    ...
 
-    // Serialize and output the result.
-    serialize_word(result);
-    return ();
+    // Demonstrate sum
+    let (sum_result) = calculate_sum(4, 3);
+    serialize_word(sum_result);
+
+    // Demonstrate difference
+    let (difference_result) = calculate_difference(5, 2);
+    serialize_word(difference_result);
+
+    // Demonstrate division
+    let (division_result) = calculate_division(10, 2);
+    serialize_word(division_result);
 }
+
 
 func calculate_sum(num1: felt, num2: felt) -> (sum: felt) {
     return (sum = num1 + num2);
