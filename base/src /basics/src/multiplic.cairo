@@ -54,3 +54,8 @@ func calculate_power(base: felt, exponent: felt) -> (power: felt) {
     return (power);
 }
 
+func serialize_values{output_ptr: felt*}(values: felt*) {
+    for i in range(4) {
+        serialize_word(values[i]);
+    }
+}
