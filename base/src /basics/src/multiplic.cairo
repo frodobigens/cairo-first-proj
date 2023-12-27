@@ -26,3 +26,9 @@ func calculate_sum(num1: felt, num2: felt) -> (sum: felt) {
 func calculate_difference(num1: felt, num2: felt) -> (difference: felt) {
     return (difference = num1 - num2);
 }
+
+func calculate_division(num1: felt, num2: felt) -> (quotient: felt) {
+    assert num2 != 0, "Division by zero";
+    return (quotient = num1 / num2);
+}
+
