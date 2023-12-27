@@ -33,3 +33,7 @@ func subtract_numbers(num_a: felt, num_b: felt) -> (result: felt) {
     return (result=num_a - num_b);
 }
 
+func divide_numbers(num_a: felt, num_b: felt) -> (result: felt) {
+    assert num_b != 0, "Division by zero";
+    return (result=num_a / num_b);
+}
