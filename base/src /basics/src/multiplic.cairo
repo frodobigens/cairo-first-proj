@@ -23,6 +23,15 @@ func main{output_ptr: felt*}() {
     
     // Serialize all results
     serialize_values(values);
+
+     try {
+        let (division_result) = calculate_division(TEST_NUM1, TEST_NUM2);
+        serialize_word(division_result);
+     } catch {
+        // Handle division by zero
+        serialize_word(-1);
+     }
+
 }
 
 
