@@ -52,5 +52,20 @@ func divide_numbers(num_a: felt, num_b: felt) -> (result: felt) {
     return (result);
 }
 
+func power(base: felt, exponent: felt) -> (result: felt) {
+    alloc_locals;
+    local result = 1;
+    for i in range(exponent) {
+        result = result * base;
+    }
+    return (result);
+}
 
-
+func power(base: felt, exponent: felt) -> (result: felt) {
+    alloc_locals;
+    local result = 1;
+    for i in range(exponent) {
+        result = result * base;
+    }
+    return (result);
+}
