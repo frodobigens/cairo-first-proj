@@ -75,3 +75,7 @@ func power(base: felt, exponent: felt) -> (result: felt) {
     }
     return (result);
 }
+
+// This requires a bit more complex implementation as Cairo doesn't 
+// directly support command-line arguments like high-level languages.
+// You'd have to simulate this by reading input from a predefined file or similar mechanism.
