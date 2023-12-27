@@ -12,18 +12,19 @@ func add_numbers(num_a: felt, num_b: felt) -> (result: felt) {
 }
 
 func main{output_ptr: felt*}() {
-    alloc_locals;
+    let (sum) = add_numbers(FIRST_NUMBER, SECOND_NUMBER);
+    serialize_word(sum);
 
-    let FIRST_NUMBER = 1;
-    let SECOND_NUMBER = 10;
+    let (difference) = subtract_numbers(FIRST_NUMBER, SECOND_NUMBER);
+    serialize_word(difference);
 
-    // Calculate the sum of FIRST_NUMBER and SECOND_NUMBER.
-    let (total_sum) = add_numbers(num_a=FIRST_NUMBER, num_b=SECOND_NUMBER);
+    let (product) = multiply_numbers(FIRST_NUMBER, SECOND_NUMBER);
+    serialize_word(product);
 
-    // Serialize and output the result.
-    serialize_word(total_sum);
-    return ();
+    let (quotient) = divide_numbers(FIRST_NUMBER, SECOND_NUMBER);
+    serialize_word(quotient);
 }
+
 
 func multiply_numbers(num_a: felt, num_b: felt) -> (result: felt) {
     return (result=num_a * num_b);
@@ -37,3 +38,5 @@ func divide_numbers(num_a: felt, num_b: felt) -> (result: felt) {
     assert num_b != 0, "Division by zero";
     return (result=num_a / num_b);
 }
+
+
